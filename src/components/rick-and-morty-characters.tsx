@@ -7,13 +7,13 @@ export default function RickAndMortyCharacters() {
 
     const { data, isLoading, error } = useGetCharactersByNameQuery({ name, pageNumber });
     return (
-        <div>
+        <h1 className="text-3xl font-bold underline">
             {
                 error ? (<>Oh no, there was an error!</>)
                     : isLoading ? (<>Loading...</>)
                         : data ? (<>{ data.info.count }</>)
                             : null
             }
-        </div>
+        </h1>
     );
 }
