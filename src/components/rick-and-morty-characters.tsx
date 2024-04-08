@@ -20,7 +20,8 @@ const renderCharacters = (data: Page<Character>) => {
                 </div>
             })
         }
-        </div>);
+        </div>
+    );
 };
 
 export default function RickAndMortyCharacters() {
@@ -28,13 +29,15 @@ export default function RickAndMortyCharacters() {
     const [name, setName] = useState('');
     const { data, isLoading, error } = useGetCharactersByNameQuery({ name, pageNumber });
     return (
-        <div>
-            {
+        <div className="grid grid-cols-1 grid-rows-[40px_1fr] overflow-auto">
+            <div>
+            </div>
+            <div>{
                 error ? renderError()
                     : isLoading ? renderLoading()
                         : data ? renderCharacters(data)
                             : null
-            }
+            }</div>
         </div>
     );
 }

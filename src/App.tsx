@@ -9,7 +9,7 @@ function App() {
             rid-flow-col gap-4 h-full dark:bg-black dark:text-white p-2">
             <div className="col-span-5"><Header></Header></div>
             <div className="col-span-1">SIDEBAR</div>
-            <div className="col-span-4 overflow-auto"><RickAndMortyCharacters/></div>
+            <div className="col-span-4"><RickAndMortyCharacters/></div>
         </div>
     );
 }
