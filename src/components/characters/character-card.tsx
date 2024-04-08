@@ -7,7 +7,7 @@ type Props = {
 
 export function CharacterCard(props: Props) {
     return (
-        <div className="card card-compact w-[200px] shadow-xl bg-gray-700" key={ props.id }>
+        <div className="card card-compact w-[200px] shadow-xl bg-neutral-800" key={ props.id }>
             <figure><img src={ props.image } alt={ `${ props.name }` }/></figure>
             <div className="card-body">
                 <h2 className="card-title max-w-[160px] overflow-hidden whitespace-nowrap">{ props.name }</h2>
